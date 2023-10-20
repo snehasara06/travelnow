@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="travelNow">
+
+<head>
+    <title>Travel Now</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3//angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+</head>
+
+<body>
+    <h1>Home Page</h1>
+    <p>{{ message }}</p>
+    <a href="#/about">Go to About Page</a>
+
+
+
+
+    <!-- Component -->
+    <header-component></header-component>
+
+    <!-- Expression-->
+    <div ng-controller="myController">
+        <h1>{{ message }}</h1>
+    </div>
+
+    <!-- Element Directive -->
+    <departure></departure>
+
+    <!-- Attribute Directive -->
+    <p departure> Welcome </p>
+    <br>
+
+    <!-- Class Directive -->
+    <button class="toggleClass">Click me to change color</button>
+    <br>
+
+    <!-- Multi-element directive -->
+    <a class="multi-element" href="index.html">Home</a>
+    <a class="multi-element" ng-href="#/login">Login</a>
+    <a class="multi-element" href="about.html">About</a>
+
+    <!-- <div ng-controller="HomeController">
+        <destination-list destinations="destinations"></destination-list>
+    </div> -->
+</body>
+
+</html>

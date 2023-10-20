@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Welcome Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+</head>
+<body ng-controller="WelcomeController">
+    <h2>Welcome</h2>
+    <p ng-bind="welcomeMessage"></p>
+    
+     <!-- <div>
+        <p>Welcome {{email}}</p>
+        <a href="/">Log out</a>
+    </div> -->
+
+
+    <div class="container">
+        <h2> View Students </h2>
+        Search:
+        <br/>
+            <input type="text" ng-model="name" />
+        <br/>
+        <ul>
+            <li ng-repeat="student in students | filter:name">{{student.name}} , {{student.city}}</li>
+        </ul>
+    
+        <a href="#/home"> Back</a>
+    </div>
+    
+    </body>
+</html>

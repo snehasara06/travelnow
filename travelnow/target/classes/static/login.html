@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="travelNow">
+<head>
+    <title>Login Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Add the link to Bootstrap CSS here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body ng-controller="LoginController" class="bg-light">
+    <!-- <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-4">
+                <form name="loginForm"  ng-submit="login()" class="border p-3 rounded">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" ng-model="user.email" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" ng-model="user.password" required class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onsubmit="login()">Login</button>
+                </form> -->
+                <!-- Structural Directive -->
+                <!-- <div ng-if="isLoggedIn" class="mt-3">
+                    <h2 class="text-success">Welcome, {{ user.email }}!</h2>
+                </div> -->
+            <!-- </div>
+        </div>
+    </div> -->
+    <form class="form-horizontal" role="form" name="loginForm" novalidate>
+        <div class="form-group" >
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" id="userName" name="userName" placeholder="User Name" class="form-control" ng-model="userName" required />
+                <span class="help-block" ng-show="loginForm.userName.$touched && loginForm.userName.$invalid">Please enter User Name.</span>
+            </div>
+            <div class="col-sm-3">
+            </div>
+    
+        </div>
+        <div class="form-group" >
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+                <input type="password" id="password" name="password" placeholder="Password" class="form-control" ng-model="password" required />
+                <span ng-show="loginForm.password.$touched && loginForm.password.$error.required">Please enter Password.</span>
+            </div>
+            <div class="col-sm-3">
+            </div>
+        </div>
+        
+        <input type="submit" value="Login" class="btn btn-primary col-sm-offset-3" ng-click="authenticate(userName)" />
+    </form>
+    <p>{{message}}</p>
+	<a href="#/viewStudents"> View Students List</a>
+
+</body>
+</html>

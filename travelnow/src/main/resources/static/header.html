@@ -1,0 +1,54 @@
+<!-- header.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="headerComponent.js"></script>
+    <script src="controller.js"></script>
+</head>
+
+<body>
+    <!-- header.html -->
+    <div class="header">
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="https://img.freepik.com/free-photo/travel-concept-with-baggage_23-2149153260.jpg"
+                        alt="Logo" width="150" height="150"> -->
+                    <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg" alt="Logo"
+                        width="150" height="150">
+                    Explore the world
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="destinations.html">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#/bookings">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#/profile">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-bar">
+                    <input class="form-control" type="text" placeholder="Search for destinations...">
+                    <button class="btn btn-outline-success">Search</button>
+                </div>
+            </nav>
+        </header>
+    </div>
+</body>
+
+</html>
